@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101522">
+  <meta name="description" content="Emberbound — a tiny original pixel-art platform adventure.">
+  <title>EMBERBOUND — The Little Spark</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="page-noise"></div>
+  <header class="site-header">
+    <a class="wordmark" href="#" aria-label="Emberbound home"><span class="mark">✦</span> EMBER<span>BOUND</span></a>
+    <div class="header-right"><span class="build-tag">PIXEL ADVENTURE <i></i></span><button class="icon-btn" id="soundToggle" aria-label="Toggle sound" title="Sound">♫</button></div>
+  </header>
+
+  <main class="layout">
+    <section class="hero">
+      <p class="eyebrow">A SMALL WORLD. A BIG ADVENTURE.</p>
+      <h1>Find the light.<br><em>Bring it home.</em></h1>
+      <p class="intro-copy">Sebuah petualangan platformer pixel-art tentang makhluk kecil bernama Pip, hutan yang kehilangan cahaya, dan keberanian untuk menyalakannya kembali.</p>
+    </section>
+
+    <section class="game-shell" aria-label="Emberbound game">
+      <div class="game-topbar">
+        <div class="game-title"><span class="live-dot"></span> THE MOSSY OUTSKIRTS <small id="levelLabel">STAGE 01</small></div>
+        <div class="game-stats">
+          <span title="Collected embers">✦ <b id="emberCount">00</b></span>
+          <span title="Lives">♥ <b id="lifeCount">03</b></span>
+          <span title="Elapsed time">◷ <b id="timeCount">00:00</b></span>
+        </div>
+      </div>
+      <div class="canvas-wrap">
+        <canvas id="game" width="960" height="540" aria-label="Emberbound platform game canvas"></canvas>
+        <div class="screen" id="screen">
+          <div class="screen-card">
+            <div class="pixel-emblem">✦</div>
+            <p class="eyebrow" id="screenEyebrow">WELCOME, LITTLE SPARK</p>
+            <h2 id="screenTitle">EMBER<span>BOUND</span></h2>
+            <p id="screenText">Cahaya hutan mulai padam. Bantu Pip mengumpulkan ember dan menemukan gerbang kuno.</p>
+            <button class="primary-btn" id="mainAction">BEGIN ADVENTURE <span>↗</span></button>
+            <div class="screen-foot">OR PRESS <kbd>ENTER</kbd></div>
+          </div>
+        </div>
+        <div class="toast" id="toast" role="status"></div>
+        <div class="pause-chip" id="pauseChip">Ⅱ PAUSED</div>
+      </div>
+      <div class="game-bottombar">
+        <div class="key-guide"><span><kbd>A</kbd><kbd>D</kbd> / <kbd>←</kbd><kbd>→</kbd> MOVE</span><span><kbd>SPACE</kbd> / <kbd>W</kbd> JUMP</span><span><kbd>ESC</kbd> PAUSE</span></div>
+        <div class="game-actions"><button class="text-btn" id="restartBtn">↻ RESTART</button><button class="text-btn" id="helpBtn">? HOW TO PLAY</button></div>
+      </div>
+    </section>
+
+    <section class="below-grid">
+      <article class="info-card objective">
+        <div class="info-icon">✧</div><div><h3>YOUR QUEST</h3><p>Jelajahi area, kumpulkan ember, hindari Thornbug, dan capai portal bercahaya di ujung stage.</p></div>
+      </article>
+      <article class="info-card progress">
+        <div class="info-icon">▧</div><div class="progress-copy"><h3>ADVENTURE LOG</h3><p id="saveStatus">Belum ada perjalanan tersimpan.</p><div class="progress-track"><span id="progressBar"></span></div></div>
+      </article>
+      <article class="info-card controls-card">
+        <div class="info-icon">⌘</div><div><h3>ON THE GO</h3><p>Game ini juga bisa dimainkan di layar sentuh.</p><div class="touch-controls"><button id="touchLeft" aria-label="Move left">◀</button><button id="touchRight" aria-label="Move right">▶</button><button id="touchJump" aria-label="Jump">▲</button></div></div>
+      </article>
+    </section>
+    <footer><span>EMBERBOUND</span> · AN ORIGINAL PIXEL PLATFORMER · MADE WITH HTML, CSS & JAVASCRIPT</footer>
+  </main>
+  <script src="js/game.js"></script>
+</body>
+</html>
