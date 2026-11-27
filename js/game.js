@@ -78,7 +78,7 @@ function drawWorld(){
 function drawPlayer(){
  if(player.invuln>0&&Math.floor(frame/5)%2===0)return;
  let x=player.x-camera,y=player.y,bob=player.ground?Math.sin(player.anim)*2:0;
- ctx.save();ctx.translate(Math.round(x+15),Math.round(y+bob));if(player.face<0)ctx.scale(-1,1);
+ ctx.save();ctx.translate(Math.round(x+15),Math.round(y+18+bob));if(player.face<0)ctx.scale(-1,1);
  // little forest sprite Pip, custom silhouette
  pixelRect(-10,-18,20,21,'#d9a77a');pixelRect(-8,-23,16,8,'#e9c99a');pixelRect(-12,-16,4,12,'#e9c99a');pixelRect(8,-16,4,12,'#e9c99a');
  pixelRect(-8,-12,4,4,'#25343b');pixelRect(4,-12,4,4,'#25343b');pixelRect(1,-5,5,2,'#9e5c56');
